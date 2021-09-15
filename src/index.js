@@ -1,10 +1,13 @@
-/*
- * @Author: your name
- * @Date: 2021-09-15 16:35:43
- * @LastEditTime: 2021-09-15 16:36:58
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /fast-cache-ddza/src/index.js
- */
+class FastCache {
+  constructor() {
+    this.list = {};
+  }
+  set(key, value) {
+    this.list[key] = value;
+  }
+  get(key) {
+    return this.list[key];
+  }
+}
 
-alert('fast-cache')
+window.FastCache = FastCache;
